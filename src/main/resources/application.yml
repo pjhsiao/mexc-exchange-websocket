@@ -1,0 +1,25 @@
+server:
+  port: 8888
+  undertow:
+    buffer-size: 1024
+    direct-buffers: true
+
+restTemplate:
+  connPoolSize: 80
+  maxPerRoute: 100
+  connTimeout: 8000
+  readTimeout: 15000
+  connReqTimeout: 10000
+
+threadPool:
+  keepAliveSeconds: 300
+  threadNamePrefix: "threadPool-"
+  corePoolSize: 10
+  maxPoolSize: 300
+  queueCapacity: 5000
+
+logging:
+  level:
+    root: INFO
+    invest.robot.mexc: INFO
+    org.springframework.boot: INFO
