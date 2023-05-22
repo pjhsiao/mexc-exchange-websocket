@@ -1,8 +1,5 @@
 # mexc-exchange-websocket ![java](https://img.shields.io/badge/%20-java-orange) ![maven](https://img.shields.io/badge/%20-maven-blue)
-Use WebSocket to connect to the [MEXC](https://www.mexc.com/) exchange for acquiring cryptocurrency data.
-
-
- 
+To use the Observer pattern to obtain data of the cryptocurrency market using the [MEXC](https://www.mexc.com/) WebSocket.
  
 
 
