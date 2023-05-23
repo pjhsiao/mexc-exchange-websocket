@@ -48,9 +48,8 @@ class MexcApplicationTests {
                                             .reqStreamParams("spot@public.kline.v3.api@BTCUSDT@Min60")
                                             .build();
                                                 mexcSpotWebStock.send(channelDataEntity);
-
-            //to wait for data that has been pushed by server
-            Thread.sleep(100000L); // 10 seconds
+            // make main thread wait
+            Thread.currentThread().join();
 
     }
 

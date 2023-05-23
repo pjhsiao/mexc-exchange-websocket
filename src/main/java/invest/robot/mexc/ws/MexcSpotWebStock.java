@@ -2,6 +2,7 @@ package invest.robot.mexc.ws;
 
 import invest.robot.mexc.channel.ChannelObservable;
 import invest.robot.mexc.channel.ChannelObserver;
+import invest.robot.mexc.channel.IChannelObservable;
 import invest.robot.mexc.entity.ChannelDataEntity;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.WebSocket;
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class MexcSpotWebStock extends MexcWebStock{
     @Autowired
-    private ChannelObservable channelObservable;
+    private IChannelObservable channelObservable;
     @Autowired
     private ThreadPoolTaskExecutor threadPool;
 
