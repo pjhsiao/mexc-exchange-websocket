@@ -19,10 +19,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
 import javax.net.ssl.SSLContext;
+import java.nio.charset.Charset;
 import java.util.Collections;
 
 
@@ -43,9 +45,16 @@ public class RestTemplateConfig {
 	@Bean
     public RestTemplate restTemplate() {
 		RestTemplate restTemplate = new RestTemplate(httpRequestFactory());
+		restTemplate.getMessageConverters().add(0, stringConverter());
 		restTemplate.getMessageConverters().add(messageConverter());
         return restTemplate;
     }
+
+    @Bean
+	public StringHttpMessageConverter stringConverter(){
+		StringHttpMessageConverter stringHttpMessageConverter =	new StringHttpMessageConverter(Charset.forName("UTF-8"));
+		return stringHttpMessageConverter;
+	}
 
 	@Bean
 	public MappingJackson2HttpMessageConverter messageConverter() {

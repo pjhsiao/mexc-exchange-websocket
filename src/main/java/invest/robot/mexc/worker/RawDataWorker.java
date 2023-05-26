@@ -32,7 +32,6 @@ public class RawDataWorker implements Runnable{
                 log.info("klineEntity : {}", klineEntity);
             }
         } catch (JsonProcessingException e) {
-            e.printStackTrace();
             log.error("Occurred an Error : {}, {}", e.getMessage(), e);
         }
     }

@@ -1,40 +1,16 @@
 package invest.robot.mexc.ws;
 
-import invest.robot.mexc.wslistenkey.CreateListenKey;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
 import okio.ByteString;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
-public abstract class MexcWebStock extends WebSocketListener {
+public abstract class MexcWebStock extends WebSocketListener implements IMexcWebStock{
 
-    private static WebSocket privateClient;
     private static WebSocket publicClient;
-
-    protected WebSocket getPrivateClient() {
-        if(null == privateClient){
-            OkHttpClient client = new OkHttpClient.Builder()
-                    .readTimeout(0, TimeUnit.MILLISECONDS)
-                    .build();
-            Map<String, String> params = new HashMap<>();
-            params.put("recWindow", "60000");
-            String listenKey = CreateListenKey.postUserDataStream(params).get("listenKey");
-
-            Request request = new Request.Builder()
-                    .url("wss://wbs.mexc.com/ws?listenKey=" + listenKey)
-                    .build();
-            WebSocket webSocket = client.newWebSocket(request, this);
-
-            //Trigger shutdown of the dispatcher's executor so this process can exit cleanly.
-            client.dispatcher().executorService().shutdown();
-            this.privateClient = webSocket;
-        }
-        return privateClient;
-    }
 
     protected WebSocket getPublicClient() {
         if(null == publicClient){
@@ -57,6 +33,7 @@ public abstract class MexcWebStock extends WebSocketListener {
     @Override
     public void onOpen(WebSocket webSocket, Response response) {
         log.info("MEXC-Exchange WebSocket CONNECTED ....");
+        heartbeat(webSocket);
     }
 
     @Override
@@ -76,7 +53,11 @@ public abstract class MexcWebStock extends WebSocketListener {
 
     @Override
     public void onFailure(WebSocket webSocket, Throwable t, Response response) {
-        t.printStackTrace();
+        log.info("Failure: {} {}" , t.getMessage() , t);
     }
 
+    @Override
+    public void toLog(String toLogStr) {
+        log.info(toLogStr);
+    }
 }

@@ -1,6 +1,5 @@
 package invest.robot.mexc.ws;
 
-import invest.robot.mexc.channel.ChannelObservable;
 import invest.robot.mexc.channel.ChannelObserver;
 import invest.robot.mexc.channel.IChannelObservable;
 import invest.robot.mexc.entity.ChannelDataEntity;
@@ -20,6 +19,7 @@ public class MexcSpotWebStock extends MexcWebStock{
 
     @Override
     public void onMessage(WebSocket webSocket, String text) {
+        log.debug("raw:{}", text);
         channelObservable.notifyObservers(text);
     }
 
