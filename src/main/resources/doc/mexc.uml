@@ -3,110 +3,130 @@
   <ID>JAVA</ID>
   <OriginalElement>invest.robot.mexc</OriginalElement>
   <nodes>
-    <node x="332.75" y="313.0">invest.robot.mexc.entity.KlineEntity.DataDetails</node>
-    <node x="670.5291666666667" y="1185.0">invest.robot.mexc.MexcApplicationTests</node>
-    <node x="332.75" y="465.0">invest.robot.mexc.entity.KlineEntity</node>
-    <node x="340.0" y="1057.0">invest.robot.mexc.ws.MexcSpotWebStock</node>
-    <node x="962.7427083333333" y="825.0">invest.robot.mexc.entity.ChannelDataEntity</node>
-    <node x="285.75" y="674.5">invest.robot.mexc.worker.RawDataWorker</node>
-    <node x="0.0" y="1308.0">invest.robot.mexc.config.RestTemplateConfig</node>
-    <node x="661.7427083333333" y="860.0">invest.robot.mexc.channel.ChannelObservable</node>
-    <node x="752.0" y="1308.0">invest.robot.mexc.MexcApplication</node>
-    <node x="444.0" y="1308.0">invest.robot.mexc.config.ThreadPoolConfig</node>
-    <node x="650.909375" y="499.5">invest.robot.mexc.channel.IChannelObserver</node>
-    <node x="549.8625" y="663.0">invest.robot.mexc.channel.IChannelObservable</node>
-    <node x="318.75" y="0.0">invest.robot.mexc.entity.KlineEntity.CandlestickData</node>
-    <node x="347.0" y="848.0">invest.robot.mexc.channel.ChannelObserver</node>
-    <node x="0.0" y="814.0">invest.robot.mexc.ws.MexcWebStock</node>
+    <node x="624.2408730158729" y="313.0">invest.robot.mexc.entity.KlineEntity.DataDetails</node>
+    <node x="125.2698412698411" y="686.0">invest.robot.mexc.ws.IMexcWebStock</node>
+    <node x="624.2408730158729" y="476.5">invest.robot.mexc.entity.KlineEntity</node>
+    <node x="190.0198412698411" y="1091.5">invest.robot.mexc.ws.MexcSpotWebStock</node>
+    <node x="577.2408730158729" y="697.5">invest.robot.mexc.worker.RawDataWorker</node>
+    <node x="317.0" y="1233.0">invest.robot.mexc.MexcApplication</node>
+    <node x="956.5" y="1230.5">invest.robot.mexc.config.ThreadPoolConfig</node>
+    <node x="1149.9166666666667" y="697.0">invest.robot.mexc.channel.IChannelObserver</node>
+    <node x="610.2408730158729" y="0.0">invest.robot.mexc.entity.KlineEntity.CandlestickData</node>
+    <node x="796.2698412698412" y="859.5">invest.robot.mexc.channel.ChannelObserver</node>
+    <node x="71.2698412698411" y="837.0">invest.robot.mexc.ws.MexcWebStock</node>
+    <node x="418.26984126984115" y="894.0">invest.robot.mexc.trigger.RawDataTriggerImpl</node>
+    <node x="79.1448412698411" y="1231.0">invest.robot.mexc.MexcApplicationTests</node>
+    <node x="0.0" y="465.0">invest.robot.mexc.entity.ChannelDataEntity</node>
+    <node x="512.5" y="1230.5">invest.robot.mexc.config.RestTemplateConfig</node>
+    <node x="1179.269841269841" y="1080.0">invest.robot.mexc.channel.ChannelObservable</node>
+    <node x="1055.269841269841" y="883.0">invest.robot.mexc.channel.IChannelObservable</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="invest.robot.mexc.channel.ChannelObserver" target="invest.robot.mexc.worker.RawDataWorker">
-      <point x="-59.75" y="-62.5" />
-      <point x="406.75" y="789.0" />
-      <point x="402.75" y="789.0" />
-      <point x="0.0" y="39.0" />
-    </edge>
     <edge source="invest.robot.mexc.channel.IChannelObservable" target="invest.robot.mexc.channel.IChannelObserver">
       <point x="0.0" y="-50.5" />
-      <point x="676.8625" y="643.0" />
-      <point x="716.909375" y="643.0" />
+      <point x="1182.269841269841" y="817.0" />
+      <point x="1215.9166666666667" y="817.0" />
       <point x="-22.0" y="39.5" />
     </edge>
-    <edge source="invest.robot.mexc.MexcApplicationTests" target="invest.robot.mexc.entity.ChannelDataEntity">
-      <point x="52.0" y="-39.0" />
-      <point x="826.5291666666667" y="1160.0" />
-      <point x="1147.9927083333332" y="1160.0" />
-      <point x="61.75" y="85.5" />
-    </edge>
     <edge source="invest.robot.mexc.channel.ChannelObserver" target="invest.robot.mexc.channel.IChannelObserver">
-      <point x="59.75" y="-62.5" />
-      <point x="526.25" y="789.0" />
-      <point x="530.25" y="789.0" />
-      <point x="530.25" y="633.0" />
-      <point x="672.909375" y="633.0" />
+      <point x="59.749999999999886" y="-74.0" />
+      <point x="975.519841269841" y="817.0" />
+      <point x="1171.9166666666667" y="817.0" />
       <point x="-66.0" y="39.5" />
     </edge>
+    <edge source="invest.robot.mexc.ws.IMexcWebStock" target="invest.robot.mexc.entity.ChannelDataEntity">
+      <point x="0.0" y="-50.5" />
+      <point x="234.7698412698411" y="661.0" />
+      <point x="205.83333333333331" y="661.0" />
+      <point x="82.33333333333331" y="85.5" />
+    </edge>
+    <edge source="invest.robot.mexc.channel.ChannelObservable" target="invest.robot.mexc.channel.IChannelObserver">
+      <point x="93.66666666666674" y="-50.5" />
+      <point x="1413.436507936508" y="1060.0" />
+      <point x="1330.769841269841" y="1060.0" />
+      <point x="1330.769841269841" y="807.0" />
+      <point x="1303.9166666666667" y="807.0" />
+      <point x="66.0" y="39.5" />
+    </edge>
+    <edge source="invest.robot.mexc.ws.MexcSpotWebStock" target="invest.robot.mexc.channel.IChannelObservable">
+      <point x="101.19999999999999" y="-39.0" />
+      <point x="417.7198412698411" y="1060.0" />
+      <point x="1118.769841269841" y="1060.0" />
+      <point x="-63.5" y="50.5" />
+    </edge>
+    <edge source="invest.robot.mexc.entity.KlineEntity.DataDetails" target="invest.robot.mexc.entity.KlineEntity.CandlestickData">
+      <point x="0.0" y="-51.0" />
+      <point x="0.0" y="131.5" />
+    </edge>
+    <edge source="invest.robot.mexc.channel.ChannelObserver" target="invest.robot.mexc.worker.RawDataWorker">
+      <point x="-59.750000000000114" y="-74.0" />
+      <point x="856.019841269841" y="817.0" />
+      <point x="752.7408730158729" y="817.0" />
+      <point x="58.5" y="39.0" />
+    </edge>
+    <edge source="invest.robot.mexc.MexcApplicationTests" target="invest.robot.mexc.entity.ChannelDataEntity">
+      <point x="-52.0" y="-73.5" />
+      <point x="131.1448412698411" y="1206.0" />
+      <point x="40.76666666666665" y="1206.0" />
+      <point x="-82.33333333333337" y="85.5" />
+    </edge>
     <edge source="invest.robot.mexc.channel.ChannelObservable" target="invest.robot.mexc.channel.IChannelObservable">
-      <point x="-93.66666666666669" y="-50.5" />
-      <point x="708.5760416666667" y="789.0" />
-      <point x="676.8625" y="789.0" />
-      <point x="0.0" y="50.5" />
+      <point x="-93.66666666666674" y="-50.5" />
+      <point x="1226.1031746031745" y="1060.0" />
+      <point x="1245.769841269841" y="1060.0" />
+      <point x="63.5" y="50.5" />
     </edge>
     <edge source="invest.robot.mexc.worker.RawDataWorker" target="invest.robot.mexc.entity.KlineEntity">
       <point x="0.0" y="-39.0" />
       <point x="0.0" y="74.0" />
     </edge>
     <edge source="invest.robot.mexc.ws.MexcSpotWebStock" target="invest.robot.mexc.channel.ChannelObserver">
-      <point x="0.0" y="-39.0" />
-      <point x="0.0" y="62.5" />
+      <point x="50.60000000000002" y="-39.0" />
+      <point x="367.1198412698411" y="1050.0" />
+      <point x="915.7698412698412" y="1050.0" />
+      <point x="0.0" y="74.0" />
     </edge>
-    <edge source="invest.robot.mexc.channel.ChannelObservable" target="invest.robot.mexc.channel.IChannelObserver">
-      <point x="93.66666666666663" y="-50.5" />
-      <point x="895.909375" y="789.0" />
-      <point x="825.3625" y="789.0" />
-      <point x="825.3625" y="633.0" />
-      <point x="804.909375" y="633.0" />
-      <point x="66.0" y="39.5" />
+    <edge source="invest.robot.mexc.trigger.RawDataTriggerImpl" target="invest.robot.mexc.worker.RawDataWorker">
+      <point x="0.0" y="-39.5" />
+      <point x="597.2698412698412" y="817.0" />
+      <point x="635.7408730158729" y="817.0" />
+      <point x="-58.5" y="39.0" />
     </edge>
     <edge source="invest.robot.mexc.ws.MexcSpotWebStock" target="invest.robot.mexc.ws.MexcWebStock">
-      <point x="-101.19999999999993" y="-39.0" />
-      <point x="365.30000000000007" y="1037.0" />
-      <point x="81.75" y="1037.0" />
-      <point x="-81.75" y="96.5" />
-    </edge>
-    <edge source="invest.robot.mexc.ws.MexcSpotWebStock" target="invest.robot.mexc.channel.ChannelObservable">
-      <point x="50.60000000000002" y="-39.0" />
-      <point x="517.1" y="1027.0" />
-      <point x="802.2427083333333" y="1027.0" />
-      <point x="0.0" y="50.5" />
-    </edge>
-    <edge source="invest.robot.mexc.entity.KlineEntity.DataDetails" target="invest.robot.mexc.entity.KlineEntity.CandlestickData">
-      <point x="0.0" y="-51.0" />
-      <point x="0.0" y="131.5" />
+      <point x="0.0" y="-39.0" />
+      <point x="81.75" y="96.5" />
     </edge>
     <edge source="invest.robot.mexc.entity.KlineEntity" target="invest.robot.mexc.entity.KlineEntity.DataDetails">
       <point x="0.0" y="-74.0" />
       <point x="0.0" y="51.0" />
     </edge>
     <edge source="invest.robot.mexc.MexcApplicationTests" target="invest.robot.mexc.ws.MexcSpotWebStock">
-      <point x="-52.0" y="-39.0" />
-      <point x="722.5291666666667" y="1160.0" />
-      <point x="466.5" y="1160.0" />
+      <point x="52.0" y="-73.5" />
+      <point x="235.1448412698411" y="1206.0" />
+      <point x="316.5198412698411" y="1206.0" />
       <point x="0.0" y="39.0" />
     </edge>
     <edge source="invest.robot.mexc.ws.MexcSpotWebStock" target="invest.robot.mexc.entity.ChannelDataEntity">
-      <point x="101.20000000000005" y="-39.0" />
-      <point x="567.7" y="1037.0" />
-      <point x="1024.4927083333332" y="1037.0" />
-      <point x="-61.75" y="85.5" />
+      <point x="-101.19999999999993" y="-39.0" />
+      <point x="215.31984126984116" y="1060.0" />
+      <point x="60.769841269841095" y="1060.0" />
+      <point x="60.769841269841095" y="661.0" />
+      <point x="123.5" y="661.0" />
+      <point x="0.0" y="85.5" />
+    </edge>
+    <edge source="invest.robot.mexc.ws.MexcWebStock" target="invest.robot.mexc.ws.IMexcWebStock">
+      <point x="81.75" y="-96.5" />
+      <point x="316.5198412698411" y="817.0" />
+      <point x="289.5198412698411" y="817.0" />
+      <point x="54.75" y="50.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.8650137741046832" x="605.0" y="716.0" />
+  <settings layout="Hierarchic Group" zoom="0.8" x="552.8873626373622" y="728.0" />
   <SelectedNodes />
   <Categories>
-    <Category>Methods</Category>
     <Category>Properties</Category>
+    <Category>Methods</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
